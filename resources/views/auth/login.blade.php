@@ -12,7 +12,8 @@
                             @csrf
                             <div class="flex flex-col mt-4">
                                 <input id="email" type="text" 
-                                        class="flex-grow h-8 px-2 border rounded border-grey-400 @error('email') border-red-500 @enderror" 
+                                        class="flex-grow h-8 px-2 border rounded border-grey-600 placeholder-gray-500 @error('email') border-red-500 @enderror"
+                                        placeholder="Email" 
                                         name="email" value="{{ old('email') }}" 
                                         required autocomplete="email" autofocus>
                                 @error('email')
@@ -22,7 +23,10 @@
                                 @enderror
                             </div>
                             <div class="flex flex-col mt-4">
-                                <input id="password" type="password" class="flex-grow h-8 px-2 rounded border border-grey-400 @error('password') border-red-500 @enderror" name="password" required autocomplete="current-password">
+                                <input id="password" type="password"
+                                class="flex-grow h-8 px-2 placeholder-gray-500 rounded border border-grey-600 @error('password') border-red-500 @enderror"
+                                placeholder="Password"
+                                name="password" required autocomplete="current-password">
                                 @error('password')
                                     <span class="text-red-500" role="alert">
                                         <strong>{{ $message }}</strong>
