@@ -11,10 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('frontend/pages/index');
-});
+// Route::get('/', function () {
+//     return view('frontend.pages.index');
+// });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index');
