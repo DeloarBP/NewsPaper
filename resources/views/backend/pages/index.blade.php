@@ -1,5 +1,6 @@
 @extends('backend.layouts.app')
 
 @section('content')
-    <h1>Hellow Backend Home Page</h1>
+<h2> Hellow backend </h2>
 @endsection
+
