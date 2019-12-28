@@ -15,6 +15,6 @@ package-lock.json
 .env
 .phpunit.result.cache
 .php_cs.cache
-/public/css/app.css
-/public/js/app.js
-/public/assets/*
+/public/assets
+/public/css
+/public/js
