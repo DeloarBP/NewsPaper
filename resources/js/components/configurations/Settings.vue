@@ -1,25 +1,20 @@
 <template>
-    <div>
+    <div class="flex justify-start pt-20">
+        <div class="w-2/4 bg-white  border shadow p-6 rounded-lg">
         <form @submit.prevent="submit">
-            <div>
-                 <lebel>
-                 </lebel>
-                 <input v-model="name" />
-            </div>
-
-            <base-input v-model="name" id="name" inputStyle="bg-green-200" label="Name" for="name"/>
-            <base-input v-model="age" />
             <base-input v-model="gender" label="Gender"/>
-            <button @click="submit()">Hi</button>
+            <base-button class="py-2" buttonClass="bg-green-500 text-white">Submit</base-button>
         </form>
+        </div>
     </div>
 </template>
 
 <script>
 import BaseInput from '../lib/form/BaseInput'
+import BaseButton from '../lib/buttons/BaseButton'
 export default {
     name: 'Settings',
-    components: { BaseInput },
+    components: { BaseInput, BaseButton },
     data() {
         return {
             name: '',

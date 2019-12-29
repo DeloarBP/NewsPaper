@@ -15,7 +15,7 @@
             </header>
             <div class="flex-1 flex">
                 @include('layouts.sidebar')
-                <main class="p-4">
+                <main class="p-4 w-full">
                     @yield('content')
                 </main>
             </div>
