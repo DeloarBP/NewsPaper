@@ -4,18 +4,18 @@ namespace App\Http\Controllers\Backend\Configurations;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Configurations\Setting;
+use App\Models\Configuration\Settings;
 
 
 class SettingsController extends Controller
 {
 
-    private $viewPath = 'backend.page.configuration';
+    private $viewPath = 'backend.pages.configuration';
 
 
     public function index()
     {
-
+        return view("{$this->viewPath}.index");
     }
 
     public function create()
@@ -28,22 +28,22 @@ class SettingsController extends Controller
 
     }
 
-    public function edit(Setting $setting)
+    public function edit(Settings $setting)
     {
 
     }
 
-    public function update(Request $request, Setting $setting)
+    public function update(Request $request, Settings $setting)
     {
 
     }
 
-    public function approveToggle(Setting $setting)
+    public function approveToggle(Settings $setting)
     {
 
     }
 
-    public function delete(Setting $setting)
+    public function delete(Settings $setting)
     {
 
     }

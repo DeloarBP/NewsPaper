@@ -30,12 +30,12 @@ Route::prefix('category')->namespace('Category')->group(function () {
 
 //Settings
 Route::prefix('settings')->namespace('Configurations')->group( function (){
-    Route::get('/', 'SettingsController@index')->name('setting.index');
-    Route::get('/create', 'SettingsController@create')->name('setting.create');
-    Route::post('/store', 'SettingsController@store')->name('setting.store');
-    Route::get('/{setting}/edit', 'SettingsController@edit')->name('setting.edit');
-    Route::put('/{setting}/update', 'SettingsController@update')->name('setting.update');
-    Route::post('/data', 'SettingsController@getData')->name('setting.data');
-    Route::put('{setting}/approve', 'SettingsController@approveToggle')->name('setting.approve');
-    Route::delete('{setting}/delete', 'SettingsController@delete')->name('setting.delete');
+    Route::get('/', 'SettingsController@index')->name('settings.index');
+    Route::get('/create', 'SettingsController@create')->name('settings.create');
+    Route::post('/store', 'SettingsController@store')->name('settings.store');
+    Route::get('/{settings}/edit', 'SettingsController@edit')->name('settings.edit');
+    Route::put('/{settings}/update', 'SettingsController@update')->name('settingsupdate');
+    Route::post('/data', 'SettingsController@getData')->name('settings.data');
+    Route::put('{settings}/approve', 'SettingsController@approveToggle')->name('settings.approve');
+    Route::delete('{settings}/delete', 'SettingsController@delete')->name('settings.delete');
 });
