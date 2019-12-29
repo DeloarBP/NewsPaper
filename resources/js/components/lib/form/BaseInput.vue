@@ -5,7 +5,7 @@
         <span v-if="required && label"> * </span>
     </label>
     <input 
-        class="py-2 px-4 bg-gray-100 border-2"
+        class="py-2 px-4 bg-gray-100 border-2 rounded-lg focus:outline-none focus:shadow focus:border-green-400"
         ref="input" 
         :class="inputStyle" 
         :value="value"

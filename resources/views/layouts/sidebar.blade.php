@@ -1,4 +1,4 @@
-<aside class="w-64 p-6 bg-gray-100">
+<aside class="w-64 p-6 bg-gray-100 flex-shrink-0">
     <nav>
         <a href="#" class="-mx-3 py-3 flex text-gray-600 font-semibold">
             <span class="mr-2">
