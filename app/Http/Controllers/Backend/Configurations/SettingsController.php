@@ -20,7 +20,7 @@ class SettingsController extends Controller
 
     public function create()
     {
-
+        return view("{$this->viewPath}.create");
     }
 
     public function store(Request $request)
