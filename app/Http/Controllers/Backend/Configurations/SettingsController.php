@@ -25,7 +25,7 @@ class SettingsController extends Controller
 
     public function store(Request $request)
     {
-
+        dd($request);
     }
 
     public function edit(Settings $setting)

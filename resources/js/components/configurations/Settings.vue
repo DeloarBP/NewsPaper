@@ -32,7 +32,7 @@
 
             <div>
                 <base-input class="mb-2"
-                v-model="settings.alue"
+                v-model="settings.value"
                 name="value"
                 v-validate.continues="'required|min:2|max:100'"
                 inputStyle="w-full"
