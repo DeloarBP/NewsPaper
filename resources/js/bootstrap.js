@@ -1,5 +1,8 @@
 window._ = require('lodash');
 
+
+window.Vue = require("vue");
+window.Action = require("./helper/Action.js").default;
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This
@@ -30,6 +33,16 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
  */
 
 // import Echo from 'laravel-echo';
+//Vee-Validate
+import VeeValidate from "vee-validate";
+Vue.use(VeeValidate, {
+    // this is the default
+    inject: true,
+    // important to name this something other than 'fields'
+    fieldsBagName: "veeFields"
+});
+
+
 
 // window.Pusher = require('pusher-js');
 
