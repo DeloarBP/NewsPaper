@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Backend\Configurations;
 
+use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Configuration\Settings;
+use App\Http\Requests\Settings\SettingsValidations;
 
 
 class SettingsController extends Controller
@@ -23,7 +25,7 @@ class SettingsController extends Controller
         return view("{$this->viewPath}.create");
     }
 
-    public function store(Request $request)
+    public function store(SettingsValidations $request)
     {
         $setting = new Settings;
         $setting->label = $request->label;
@@ -31,13 +33,14 @@ class SettingsController extends Controller
         $setting->value = $request->value;
         $setting->group = $request->group;
         $setting->is_active = $request->is_active;
-        $setting->is_api_accessibility = $request->is_api_accessibility;
+        $setting->is_api_accessible = $request->is_api_accessibility;
         $setting->description = $request->description;
         $setting->save();
 
-        return "hellow success";
-
-       // return view("{$this->viewPath}.index");
+        if($setting){
+            return $this->responseJson('Setting added successfully', route('settings.index'), Response::HTTP_OK);
+        }
+        return $this->responseJson('Operation failed', route('settings.create'), Response::HTTP_INTERNAL_SERVER_ERROR);
 
     }
 
