@@ -13,6 +13,7 @@ window.Action = require("./helper/Action.js").default;
 try {
     window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
+    var dt      = require( 'datatables.net' )( window, $ );
 } catch (e) {}
 
 /**
