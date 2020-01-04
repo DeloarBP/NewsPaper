@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Settings')
+@section('title', 'Categories')
 
 @section('content')
 <div class="text-gray-900 bg-gray-200">
     <div class="p-4 flex">
         <h1 class="text-3xl">
-            Settings
+            Category
         </h1>
     </div>
     <div class="flex justify-between pr-6 py-2">
@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="pt-1">
-            <a href="{{ route('settings.create') }}" class="text-sm flex bg-blue-500 hover:bg-blue-700 text-white py-1 px-4 rounded-lg focus:outline-none focus:shadow-outline">Create Settings</a>
+        <a href="{{ route('category.create') }}" class="text-sm flex bg-blue-500 hover:bg-blue-700 text-white py-1 px-4 rounded-lg focus:outline-none focus:shadow-outline">Create Categores</a>
         </div>
     </div>
     <div class="flex flex-col justify-center bg-white shadow rounded-t-lg">
@@ -73,4 +73,3 @@
     </div>
 </div>
 @endsection
-
