@@ -11,6 +11,7 @@ class CategoryController extends Controller
 
     public function index()
     {
+        // $category = Category::where('parent_id', 0)->get();
         return view( "{$this->viewPath}.index");
     }
     

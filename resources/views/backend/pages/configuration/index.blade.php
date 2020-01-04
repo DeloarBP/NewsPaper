@@ -42,44 +42,30 @@
             <div class="py-2 px-2">
                 <button class="flex mt-1">
                     <svg xmlns="http://www.w3.org/2000/svg"
-                         width="24" height="24">
-                         <path class="heroicon-ui" d="M2.3 7.7A1 1 0 012 7V3a1 1 0 011-1h18a1 1 0 011 1v4a1 1 0 01-.3.7L15 14.42V17a1 1 0 01-.3.7l-4 4A1 1 0 019 21v-6.59l-6.7-6.7zM4 4v2.59l6.7 6.7a1 1 0 01.3.71v4.59l2-2V14a1 1 0 01.3-.7L20 6.58V4H4z"/>
+                        width="24" height="24">
+                        <path class="heroicon-ui" d="M2.3 7.7A1 1 0 012 7V3a1 1 0 011-1h18a1 1 0 011 1v4a1 1 0 01-.3.7L15 14.42V17a1 1 0 01-.3.7l-4 4A1 1 0 019 21v-6.59l-6.7-6.7zM4 4v2.59l6.7 6.7a1 1 0 01.3.71v4.59l2-2V14a1 1 0 01.3-.7L20 6.58V4H4z"/>
                     </svg>
                 </button>
             </div>
         </div>
-        <table class="w-full text-md">
-            <thead>
-                <tr class="border bg-gray-200">
-                    <th class="text-left p-1 px-5">Label</th>
-                    <th class="text-left p-1 px-5">Name</th>
-                    <th class="text-left p-1 px-5">Value</th>
-                    <th class="text-left p-1 px-5">Is-Active</th>
-                    <th class="text-left p-1 px-5">Api-Access</th>
-                    <th class="text-left p-1 px-5">Group</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($settings as $setting)
-                <tr class="border-b hover:bg-orange-100">
-                    <td class="p-3 px-5"> {{ $setting->label }} </td>
-                    <td class="p-3 px-5">{{ $setting->name }} </td>
-                    <td class="p-3 px-5">{{ $setting->value }} </td>
-                    <td class="p-3 px-5">{{ $setting->is_active }} </td>
-                    <td class="p-3 px-5">{{ $setting->is_api_accessible }} </td>
-                    <td class="p-3 px-5">{{ $setting->group }} </td>
-
-                    <td class="p-3 px-5 flex justify-end">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path class="heroicon-ui text-gray-100" d="M17.56 17.66a8 8 0 01-11.32 0L1.3 12.7a1 1 0 010-1.42l4.95-4.95a8 8 0 0111.32 0l4.95 4.95a1 1 0 010 1.42l-4.95 4.95zm-9.9-1.42a6 6 0 008.48 0L20.38 12l-4.24-4.24a6 6 0 00-8.48 0L3.4 12l4.25 4.24zM11.9 16a4 4 0 110-8 4 4 0 010 8zm0-2a2 2 0 100-4 2 2 0 000 4z"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path class="heroicon-ui text-gray-100" d="M8 6V4c0-1.1.9-2 2-2h4a2 2 0 012 2v2h5a1 1 0 010 2h-1v12a2 2 0 01-2 2H6a2 2 0 01-2-2V8H3a1 1 0 110-2h5zM6 8v12h12V8H6zm8-2V4h-4v2h4zm-4 4a1 1 0 011 1v6a1 1 0 01-2 0v-6a1 1 0 011-1zm4 0a1 1 0 011 1v6a1 1 0 01-2 0v-6a1 1 0 011-1z"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path class="heroicon-ui text-gray-100" d="M6.3 12.3l10-10a1 1 0 011.4 0l4 4a1 1 0 010 1.4l-10 10a1 1 0 01-.7.3H7a1 1 0 01-1-1v-4a1 1 0 01.3-.7zM8 16h2.59l9-9L17 4.41l-9 9V16zm10-2a1 1 0 012 0v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6c0-1.1.9-2 2-2h6a1 1 0 010 2H4v14h14v-6z"/></svg>
-                    </td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
     </div>
+    <table id="dataTable" class="w-full text-md bg-white shadow">
+        <thead>
+            <tr class="border bg-gray-200">
+                <th class="text-left p-1 px-5">Label</th>
+                <th class="text-left p-1 px-5">Name</th>
+                <th class="text-left p-1 px-5">Is-Active</th>
+                <th class="text-left p-1 px-5">Api-Access</th>
+                <th class="text-left p-1 px-5">Group</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
 </div>
 @endsection
 
+@push('scripts')
+    @include('backend.pages.configuration.settings_datatable')
+@endpush

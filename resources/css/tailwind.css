@@ -1,10 +1,29 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
+
 
 /* Alertifyjs */
 @import "alertifyjs/build/css/alertify.css";
 @import "alertifyjs/build/css/themes/default.css";
 
-@import "tailwindcss/utilities";
 
 
+@tailwind base;
+
+@tailwind components;
+
+/* Table */
+table {
+    @apply w-full;
+}
+tbody tr {
+    @apply border-b;
+}
+tbody tr:hover { 
+    @apply bg-orange-100;
+}
+tbody>tr>td{
+    @apply px-3;
+}
+#dataTable_paginate{
+    @apply flex justify-end;
+}
+@tailwind utilities;

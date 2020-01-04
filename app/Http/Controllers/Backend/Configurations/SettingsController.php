@@ -6,11 +6,13 @@ use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Configuration\Settings;
+use App\Traits\Configurations\SettingTraits;
 use App\Http\Requests\Settings\SettingsValidations;
 
 
 class SettingsController extends Controller
 {
+    use SettingTraits;
 
     private $viewPath = 'backend.pages.configuration';
 
