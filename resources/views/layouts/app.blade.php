@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <div id="app" class="h-screen bg-gray-200 flex flex-col">
+    <div id="app" class="min-h-screen bg-gray-200 flex flex-col">
         @guest
             @yield('content')
         @else

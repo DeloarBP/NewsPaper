@@ -21,6 +21,7 @@ Route::prefix('user')->namespace('User')->group(function () {
 //Categorys
 Route::prefix('category')->namespace('Category')->group(function () {
     Route::get('/', 'CategoryController@index')->name('category.index');
+    Route::get('/create', 'CategoryController@create')->name('category.create');
     //Route::get('categories/create', 'CategoryController@example')->name('category.create');
 
     Route::get('sub_categories', 'CategoryController@sub_categories')->name('category.sub_category');
