@@ -2,6 +2,7 @@ window._ = require('lodash');
 
 
 window.Vue = require("vue");
+window.alertify = require("alertifyjs");
 window.Action = require("./helper/Action.js").default;
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -12,8 +13,6 @@ window.Action = require("./helper/Action.js").default;
 try {
     window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
-
-    require('bootstrap');
 } catch (e) {}
 
 /**
