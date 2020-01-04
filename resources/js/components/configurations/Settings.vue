@@ -46,7 +46,7 @@
 
             <div class="mb-2">
                 <label for="description" class="mb-2 text-gray-700 font-semibold">Description</label>
-                <textarea name=""
+                <textarea name="description"
                     class="resize-y border rounded focus:outline-none focus:shadow-outline w-full py-2 px-3"
                     id="description"
                     rows="5"
@@ -55,6 +55,7 @@
             </div>
             <div>
                 <base-input class="mb-4"
+                name="group"
                 v-model="settings.group"
                 inputStyle="w-full"
                 label="Group"
@@ -65,13 +66,13 @@
             <div class="flex justufy-start mb-2">
                 <div class="flex">
                     <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox" v-model="settings.is_api_accessibility">
+                        <input type="checkbox" name="is_api_accessibility" class="form-checkbox" v-model="settings.is_api_accessibility">
                         <span class="ml-2 mr-8">Api accessibility</span>
                     </label>
                 </div>
                 <div class="flex">
                     <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox" v-model="settings.is_active">
+                        <input type="checkbox" name="is_active" class="form-checkbox" v-model="settings.is_active">
                         <span class="ml-2">Active</span>
                     </label>
                 </div>
