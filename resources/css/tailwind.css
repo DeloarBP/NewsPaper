@@ -1,5 +1,10 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
+
+/* Alertifyjs */
+@import "alertifyjs/build/css/alertify.css";
+@import "alertifyjs/build/css/themes/default.css";
+
 @import "tailwindcss/utilities";
 
 
