@@ -121,7 +121,7 @@
             submit() {
                 this.$validator.validate().then(result => {
                     if (result) {
-                        Action.store(this.url, this.settings, this.method, this)
+                        Action.store(this.url, this.settings, this.method, this.data)
                     }
                 });
             }
