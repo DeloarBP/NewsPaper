@@ -17,7 +17,8 @@ class SettingsController extends Controller
 
     public function index()
     {
-        return view("{$this->viewPath}.index");
+        $settings = Settings::all();
+        return view("{$this->viewPath}.index", compact('settings'));
     }
 
     public function create()
@@ -41,12 +42,11 @@ class SettingsController extends Controller
             return $this->responseJson('Setting added successfully', route('settings.index'), Response::HTTP_OK);
         }
         return $this->responseJson('Operation failed', route('settings.create'), Response::HTTP_INTERNAL_SERVER_ERROR);
-
     }
 
     public function edit(Settings $setting)
     {
-
+        // return view("{$this->viewPath}.index" );
     }
 
     public function update(Request $request, Settings $setting)
