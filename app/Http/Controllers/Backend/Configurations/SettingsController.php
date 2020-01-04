@@ -25,7 +25,20 @@ class SettingsController extends Controller
 
     public function store(Request $request)
     {
-        dd($request);
+        $setting = new Settings;
+        $setting->label = $request->label;
+        $setting->name = $request->name;
+        $setting->value = $request->value;
+        $setting->group = $request->group;
+        $setting->is_active = $request->is_active;
+        $setting->is_api_accessibility = $request->is_api_accessibility;
+        $setting->description = $request->description;
+        $setting->save();
+
+        return "hellow success";
+
+       // return view("{$this->viewPath}.index");
+
     }
 
     public function edit(Settings $setting)
