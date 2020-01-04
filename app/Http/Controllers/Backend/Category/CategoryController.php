@@ -7,17 +7,22 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    private $viewPath = 'backend.page.category';
+    private $viewPath = 'backend.pages.categores';
 
     public function index()
     {
-        return view( "{$this->viewPath}.categories ");
-    }
-    public function create()
-    {
-
+        return view( "{$this->viewPath}.index");
     }
     
+    public function create()
+    {
+        return view( "{$this->viewPath}.create");
+    }
+    
+    public function store()
+    {
+        
+    }
 
     public function sub_categories()
     {

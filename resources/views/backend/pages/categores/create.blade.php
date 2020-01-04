@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title','Settings Create')
+@section('title','category Create')
 
 @section('content')
-    <settings-form
+    <category-form
         :url="'{{ route('settings.store') }}'"
         :method="'post'">
-    </settings-form>
+    </category-form>
 @endsection
