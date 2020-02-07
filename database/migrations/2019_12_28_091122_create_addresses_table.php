@@ -23,7 +23,7 @@ class CreateAddressesTable extends Migration
             $table->string('town_or_city', 45)->nullable();
             $table->string('country', 45)->default('bangladeshi');
             $table->string('street')->nullable();
-            $table->enum('address_type', config('enums.user.address_types'))->nullable();
+            $table->enum('address_type', config('enums.address_types'))->nullable();
             $table->nullableMorphs('addressable');
             $table->timestamps();
         });
