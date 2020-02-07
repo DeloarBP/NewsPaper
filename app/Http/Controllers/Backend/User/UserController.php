@@ -8,7 +8,7 @@ use App\Models\User\User;
 
 class UserController extends Controller
 {
-    private $viewPath = 'backend.page.user';
+    private $viewPath = 'backend.pages.users';
 
     public function index()
     {
@@ -17,7 +17,7 @@ class UserController extends Controller
 
     public function create()
     {
-
+        return view("{$this->viewPath}.create");
     }
 
     public function edit(User $user)
